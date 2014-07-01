@@ -1,0 +1,10 @@
+name: ADart_01_Proj
+description: A sample AngularDart application
+author: Saumya
+version: 0.0.1
+dependencies:
+  browser: any
+  angular: any
+  shadow_dom: any
+transformers:
+- angular
