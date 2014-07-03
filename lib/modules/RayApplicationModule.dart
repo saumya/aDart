@@ -13,11 +13,11 @@ class RayApplicationModule extends Module {
     print('RayApplicationModule:Constructor:');
     //register the dependencies
     //components
-    type(Welcome);
+    this.bind(Welcome);
     //Routers
-    value(RouteInitializerFn, applicationRouteInitializer);
+    this.bind(RouteInitializerFn, toValue: applicationRouteInitializer);
     //Route configuration
     //disables the HTML5 pushstate, rather uses the # notion in the URL
-    factory(NgRoutingUsePushState,(_) => new NgRoutingUsePushState.value(false));
+    this.bind(NgRoutingUsePushState, toFactory:(_) => new NgRoutingUsePushState.value(false));
   }
 }
